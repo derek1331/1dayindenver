@@ -72,14 +72,21 @@ class Second extends React.Component {
         <Collapsed
           adventure={this.state.activity.map((activity, index) => {
             const icon = this.state.liked.includes(activity._id) ? (
-              <Icon small>star</Icon>
+              <Icon className="star" small>star</Icon>
             ) : (
-              <Icon small>star_border</Icon>
+              <Icon className="star" small>star_border</Icon>
             );
             if (activity.catagory === "Adventure") {
               return (
                 <div className="col s6">
-                  <CardPanel>
+                  <CardPanel                     style={{
+                      padding: "24px",
+                      borderTopColor: "#795548",
+                      borderTopStyle: "solid",
+                      borderTopWidth: "5px",
+                      backgroundColor: "#fafafa",
+                      height: "270px"
+                    }}>
                     <div className="row">
                       <div className="col s6">
                         <span className="teal-text"
@@ -127,14 +134,21 @@ class Second extends React.Component {
           })}
           dining={this.state.activity.map((activity, index) => {
             const icon = this.state.liked.includes(activity._id) ? (
-              <Icon small>star</Icon>
+              <Icon className="star" small>star</Icon>
             ) : (
-              <Icon small>star_border</Icon>
+              <Icon className="star" small>star_border</Icon>
             );
             if (activity.catagory === "Dining") {
               return (
                 <div className="col s6">
-                  <CardPanel>
+                  <CardPanel style={{
+                      padding: "24px",
+                      borderTopColor: "#795548",
+                      borderTopStyle: "solid",
+                      borderTopWidth: "5px",
+                      backgroundColor: "#fafafa",
+                      height: "270px"
+                    }}>
                     <div className="row">
                       <div className="col s6">
                         <span className="teal-text"
@@ -182,14 +196,21 @@ class Second extends React.Component {
           })}
           entertainment={this.state.activity.map((activity, index) => {
             const icon = this.state.liked.includes(activity._id) ? (
-              <Icon small>star</Icon>
+              <Icon className="star" small>star</Icon>
             ) : (
-              <Icon small>star_border</Icon>
+              <Icon className="star" small>star_border</Icon>
             );
             if (activity.catagory === "Entertainment") {
               return (
                 <div className="col s6">
-                  <CardPanel>
+                  <CardPanel style={{
+                      padding: "24px",
+                      borderTopColor: "#795548",
+                      borderTopStyle: "solid",
+                      borderTopWidth: "5px",
+                      backgroundColor: "#fafafa",
+                      height: "270px"
+                    }}>
                     <div className="row">
                       <div className="col s6">
                         <span className="teal-text"

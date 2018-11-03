@@ -8,13 +8,17 @@ import {
   CardPanel
 } from "react-materialize";
 
-const Collapsed = (props) => (
+const Collapsed = props => (
   <div>
     <Collapsible popout defaultActiveKey={10}>
-      <CollapsibleItem header="Adventure" icon="filter_drama">
+      <CollapsibleItem header="Adventure" icon="landscape">
         <Row>{props.adventure}</Row>
       </CollapsibleItem>
-      <CollapsibleItem header="Dining" icon="place">
+      <CollapsibleItem
+        header="Dining"
+        icon="local_dining
+"
+      >
         <Row>{props.dining}</Row>
       </CollapsibleItem>
       <CollapsibleItem header="Entertainment" icon="whatshot">

@@ -167,13 +167,13 @@ class TestModal extends React.Component {
         <div className="modal-body">
           {icon}
           <div className="center" style={{paddingTop:"10px"}}>
-            <a style={{ color: "#795548", cursor: "pointer"}} onClick={this.handleLo}>
-              Login |
-            </a>
-            <a style={{ color: "#795548", cursor: "pointer"}} onClick={this.handleSign}>
+          <a style={{ color: "#795548", cursor: "pointer"}} onClick={this.handleSign}>
               {" "}
-              Signup
+              Signup |
             </a>
+            <a style={{ color: "#795548", cursor: "pointer"}} onClick={this.handleLo}> Login 
+            </a>
+
           </div>
 
           {/* <div className="navbutton">{this.props.children}</div> */}

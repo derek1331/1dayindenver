@@ -1,4 +1,4 @@
-.material-icons {
+.star {
     cursor: pointer;
     color: gold;
     -webkit-touch-callout: none;
@@ -22,7 +22,5 @@
     padding-bottom: 7px;
 
 }
-
-
 
 /* End hide from IE Mac */

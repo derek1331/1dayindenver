@@ -41,9 +41,9 @@ module.exports = {
                     favorites: {
                         name: req.body.name,
                         start: req.body.start,
-
                         lat: req.body.lat,
-                        long: req.body.long
+                        long: req.body.long,
+                        
 
                     }
                 },

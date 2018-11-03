@@ -5,17 +5,22 @@ import { Card, Col, CardPanel } from "react-materialize";
 class Cardy extends React.Component {
   render() {
     return (
-      <CardPanel className={this.props.color}>
+      <CardPanel style={this.props.style}>
         <div className="row">
           <div className="col s11">
-            <span className={this.props.namecolor} style={this.props.style}>{this.props.name} </span>
+            <span
+              style={{
+                fontWeight: "bold"
+              }}
+              className={this.props.namecolor}
+            >
+              {this.props.name}{" "}
+            </span>
             <br />
 
             {this.props.description}
           </div>
-          <div className="col s1">
-            {this.props.children}
-          </div>
+          <div className="col s1">{this.props.children}</div>
         </div>
       </CardPanel>
     );
@@ -28,33 +33,34 @@ class Cardy2 extends React.Component {
       <CardPanel className={this.props.class} style={this.props.style}>
         <div className="row">
           <div className="col s11">
-            <a className={this.props.namecolor} href={this.props.href}>{this.props.name}</a>
-            <br></br>
-            <span >{this.props.time}</span>
-            <br></br>
+            <a
+              style={{
+                fontWeight: "bold"
+              }}
+              className={this.props.namecolor}
+              href={this.props.href}
+            >
+              {this.props.name}
+            </a>
+            <br />
+            <span style={{ color: "black", fontWeight: "bold" }}>Time: </span>
+            <span>{this.props.time}</span>
+            <br />
+            <span style={{ color: "black", fontWeight: "bold" }}>
+              Location:{" "}
+            </span>
             <span>{this.props.location}</span>
-
-
-
           </div>
-          <div className="col s1">
-          {this.props.children}
-
-          </div>
+          <div className="col s1">{this.props.children}</div>
         </div>
       </CardPanel>
     );
   }
 }
 
-  
-  class Cardy4 extends React.Component {
-    render() {
-      return(
-        <CardPanel>
-          {this.props.children}
-        </CardPanel>
-      )
-    }
+class Cardy4 extends React.Component {
+  render() {
+    return <CardPanel>{this.props.children}</CardPanel>;
   }
+}
 export { Cardy, Cardy2, Cardy4 };

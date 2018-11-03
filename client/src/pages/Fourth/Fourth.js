@@ -131,17 +131,25 @@ class Fourth extends React.Component {
             <div className="col s6">
               {this.state.meetups.map((event, index) => {
                 const icon = this.state.liked.includes(event._id) ? (
-                  <Icon small>star</Icon>
+                  <Icon  className="star" small>star</Icon>
                 ) : (
-                  <Icon small>star_border</Icon>
+                  <Icon className="star" small>star_border</Icon>
                 );
                 return (
                   <Cardy
+
                     key={index}
                     color="white"
                     name={event.name}
                     namecolor="teal-text"
-                    description="fun"
+                    style={{
+                      padding: "24px",
+                      borderTopColor: "#795548",
+                      borderTopStyle: "solid",
+                      borderTopWidth: "5px",
+                      backgroundColor: "#fafafa"
+                    }}
+                  
                     // image="https://www.travelwyoming.com/sites/default/files/uploads/consumer/7-18_MedicineBowHikingFishing_KL_0708_3298.jpg"
                   >
                     <a
@@ -160,13 +168,13 @@ class Fourth extends React.Component {
               <Cardy4>
                 <div id="calendar"> </div>
               </Cardy4>
-              <div className="google">
+              <div className="google" style={{width: "531.547px", height: "500px"}}>
               <Map
               className="google"
                 google={this.props.google}
-                zoom={14}
+                zoom={10}
                 initialCenter={{ lat: 39.739, lng: -104.99 }}
-                style={{width: "500px", height: "500px"}}
+                style={{width: "531.547px", height: "500px"}}
               >
                 {this.state.mapstuff.map((event, index) => {
                   return (
@@ -186,7 +194,7 @@ class Fourth extends React.Component {
                   visible={this.state.showingInfoWindow}
                 >
                   <div>
-                    <h1>{this.state.selectedPlace.name}</h1>
+                    <span>{this.state.selectedPlace.name}</span>
                   </div>
                 </InfoWindow>
               </Map>

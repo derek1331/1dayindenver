@@ -114,7 +114,6 @@ class Third extends React.Component {
             liked: [...prevState.liked, id]
           }))
         );
-
       }
     }
   }
@@ -123,42 +122,33 @@ class Third extends React.Component {
     return (
       <div className="container">
         <div className="section">
-          <div className="row center-align">
-            <div className="col s6">
+          <div className="row ">
+            <div className="col s6 center-align">
               <span
                 style={{
                   fontSize: "2.28rem"
                 }}
               >
                 Find Meetups in Denver!
-              </span>{" "}
-            </div>{" "}
-            <form className="col s6">
-              <input
-                id="date"
-                type="date"
-                name="bday"
-                style={{
-                  width: "30%"
-                }}
-                onChange={this.renderMeetups}
-              />{" "}
-              {/* <a
-                        className="waves-effect waves-light btn"
-                        onChange={this.renderMeetups}
-                      >
-                        Search
-                      </a> */}{" "}
-            </form>{" "}
-          </div>{" "}
+              </span>
+            </div>
+            <div className="col s6 center-align">
+              
+                <input
+                  id="date"
+                  type="date"
+                  name="bday"
+                  style={{
+                    width: "50%",
+                    fontSize: "2.28rem"
+                  }}
+                  onChange={this.renderMeetups}
+                />
+              
+            </div>
+          </div>
           <div className="row">
-            <div
-              className="col s12"
-              style={{
-                columnGap: "9px"
-              }}
-            >
-              {" "}
+            <div className="col s12">
               {this.state.meetups.map((event, index) => {
                 function doesExist() {
                   if (event.venue) {
@@ -168,9 +158,15 @@ class Third extends React.Component {
                   }
                 }
                 const icon = this.state.liked.includes(event.id) ? (
-                  <Icon small> star </Icon>
+                  <Icon className="star" small>
+                    {" "}
+                    star{" "}
+                  </Icon>
                 ) : (
-                  <Icon small> star_border </Icon>
+                  <Icon className="star" small>
+                    {" "}
+                    star_border{" "}
+                  </Icon>
                 );
 
                 return (
@@ -181,14 +177,15 @@ class Third extends React.Component {
                       borderTopColor: "#795548",
                       borderTopStyle: "solid",
                       borderTopWidth: "5px",
-                      backgroundColor: "#fafafa"
+                      backgroundColor: "#fafafa",
+                      height: "132px"
                     }}
                     class="col s6"
                     namecolor="teal-text"
                     name={event.name}
                     href={event.link}
-                    time={`Time: ${event.local_time}`}
-                    location={`Loacation: ${doesExist()}`}
+                    time={event.local_time}
+                    location={doesExist()}
                   >
                     <a
                       id={event.id}
@@ -196,8 +193,8 @@ class Third extends React.Component {
                       key={event._id}
                       onClick={this.handleChange.bind(this, event.id, event)}
                     >
-                      {icon}{" "}
-                    </a>{" "}
+                      {icon}
+                    </a>
                   </Cardy2>
                 );
               })}{" "}
