@@ -12,7 +12,7 @@ class Third extends React.Component {
       activity: [],
       liked: [1],
       meetups: [],
-      query: new Date().toISOString().slice(0, 10),
+      query: new Date().toISOString().slice(0, 10)
     };
   }
 
@@ -28,27 +28,35 @@ class Third extends React.Component {
       )
       .then(res => {
         const meetups = res.data.events;
-        this.setState({ meetups });
+        this.setState({
+          meetups
+        });
         console.log(res.data.events);
       });
   }
 
   // Run axios
-  componentDidMount() {
+  componentWillMount() {
     this.runAxios();
-    axios({
-      method: "put",
-      url: "http://localhost:5000/api/favorites",
-      data: {
-        username: sessionStorage.getItem("user")
-      }
-    }).then(res => {
-      const alreadyliked = res.data.favorites;
-      this.setState(prevState => ({
-        liked: [...prevState.liked, alreadyliked]
-      }))
-      console.log(alreadyliked);
-    });
+    // axios({
+    //   method: "put",
+    //   url: "http://localhost:5000/api/favorites",
+    //   data: {
+    //     username: sessionStorage.getItem("user")
+    //   }
+    // }).then(res => {
+    //   if (res.data.favorites.length >= 1) {
+    //     let other = res.data.favorites.map(event => {
+    //       return event._id;
+    //     });
+    //     this.setState({
+    //       liked: other
+    //     })
+    //     console.log(this.state.liked)
+    //   } else {
+    //     return;
+    //   }
+    // });
   }
 
   // Change Date
@@ -84,7 +92,11 @@ class Third extends React.Component {
             username: sessionStorage.getItem("user"),
             name: event.name
           }
-        }).then(this.setState({ liked: liked }));
+        }).then(
+          this.setState({
+            liked: liked
+          })
+        );
         // if not found
       } else {
         axios({
@@ -102,6 +114,7 @@ class Third extends React.Component {
             liked: [...prevState.liked, id]
           }))
         );
+
       }
     }
   }
@@ -112,27 +125,40 @@ class Third extends React.Component {
         <div className="section">
           <div className="row center-align">
             <div className="col s6">
-              <span style={{ fontSize: "2.28rem" }}>
+              <span
+                style={{
+                  fontSize: "2.28rem"
+                }}
+              >
                 Find Meetups in Denver!
-              </span>
-            </div>
+              </span>{" "}
+            </div>{" "}
             <form className="col s6">
               <input
                 id="date"
                 type="date"
                 name="bday"
-                style={{ width: "30%" }}
-              />
-              <a
-                className="waves-effect waves-light btn"
+                style={{
+                  width: "30%"
+                }}
                 onChange={this.renderMeetups}
-              >
-                Search
-              </a>
-            </form>
-          </div>
+              />{" "}
+              {/* <a
+                        className="waves-effect waves-light btn"
+                        onChange={this.renderMeetups}
+                      >
+                        Search
+                      </a> */}{" "}
+            </form>{" "}
+          </div>{" "}
           <div className="row">
-            <div className="col s12" style={{ columnGap: "9px" }}>
+            <div
+              className="col s12"
+              style={{
+                columnGap: "9px"
+              }}
+            >
+              {" "}
               {this.state.meetups.map((event, index) => {
                 function doesExist() {
                   if (event.venue) {
@@ -142,9 +168,9 @@ class Third extends React.Component {
                   }
                 }
                 const icon = this.state.liked.includes(event.id) ? (
-                  <Icon small>star</Icon>
+                  <Icon small> star </Icon>
                 ) : (
-                  <Icon small>star_border</Icon>
+                  <Icon small> star_border </Icon>
                 );
 
                 return (
@@ -170,14 +196,14 @@ class Third extends React.Component {
                       key={event._id}
                       onClick={this.handleChange.bind(this, event.id, event)}
                     >
-                      {icon}
-                    </a>
+                      {icon}{" "}
+                    </a>{" "}
                   </Cardy2>
                 );
-              })}
-            </div>
-          </div>
-        </div>
+              })}{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
       </div>
     );
   }

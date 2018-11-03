@@ -23,8 +23,15 @@ class Second extends React.Component {
           if (liked[i] === id) {
             liked.splice(i, 1);
           }
-        }
-        this.setState({ liked: liked });
+        }axios({
+          method: "put",
+          url: "http://localhost:5000/api/delete",
+          data: {
+            username: sessionStorage.getItem("user"),
+            name: event.name
+          }
+        }).then(
+        this.setState({ liked: liked }));
         // if not found
       } else {
         console.log(sessionStorage.getItem("user"));
