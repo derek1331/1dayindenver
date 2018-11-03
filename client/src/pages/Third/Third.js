@@ -107,7 +107,8 @@ class Third extends React.Component {
             name: event.name,
             start: `${event.local_date}T${event.local_time}`,
             lat: event.venue ? event.venue.lat : "",
-            long: event.venue ? event.venue.lon : ""
+            long: event.venue ? event.venue.lon : "",
+            time: event.local_time
           }
         }).then(
           this.setState(prevState => ({

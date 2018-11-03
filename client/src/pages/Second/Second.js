@@ -43,7 +43,9 @@ class Second extends React.Component {
             username: sessionStorage.getItem("user"),
             name: event.name,
             lat: event.lat,
-            long: event.long
+            long: event.long,
+            start: event.start,
+            time: event.time
           }
         }).then(
           this.setState(prevState => ({
@@ -85,7 +87,6 @@ class Second extends React.Component {
                       borderTopStyle: "solid",
                       borderTopWidth: "5px",
                       backgroundColor: "#fafafa",
-                      height: "270px"
                     }}>
                     <div className="row">
                       <div className="col s6">
@@ -147,7 +148,6 @@ class Second extends React.Component {
                       borderTopStyle: "solid",
                       borderTopWidth: "5px",
                       backgroundColor: "#fafafa",
-                      height: "270px"
                     }}>
                     <div className="row">
                       <div className="col s6">
@@ -209,7 +209,6 @@ class Second extends React.Component {
                       borderTopStyle: "solid",
                       borderTopWidth: "5px",
                       backgroundColor: "#fafafa",
-                      height: "270px"
                     }}>
                     <div className="row">
                       <div className="col s6">

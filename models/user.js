@@ -13,7 +13,8 @@ const userSchema = new Schema({
 		location: Number,
 		start: String,
 		lat: Number,
-		long: Number
+		long: Number,
+		time: String
     }]
 
 })

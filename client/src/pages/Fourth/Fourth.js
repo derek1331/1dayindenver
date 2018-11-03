@@ -142,6 +142,7 @@ class Fourth extends React.Component {
                     color="white"
                     name={event.name}
                     namecolor="teal-text"
+                    description={event.time}
                     style={{
                       padding: "24px",
                       borderTopColor: "#795548",

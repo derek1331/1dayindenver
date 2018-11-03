@@ -6,42 +6,41 @@ class Foot extends React.Component {
   render() {
     return (
       <Footer
-        copyrights="2018 Copyright 1DAYINDENVER"
-        moreLinks={
-          <a className="grey-text text-lighten-4 right" href="#!">
-            More Links
-          </a>
-        }
+        copyrights="2018 Copyright ONEDAYINDENVER"
+
         links={
           <ul>
             <li>
               <a className="grey-text text-lighten-3" href="#!">
-                Link 1
+                Local Favorites
               </a>
             </li>
             <li>
               <a className="grey-text text-lighten-3" href="#!">
-                Link 2
+                Meetups
               </a>
             </li>
             <li>
               <a className="grey-text text-lighten-3" href="#!">
-                Link 3
-              </a>
-            </li>
-            <li>
-              <a className="grey-text text-lighten-3" href="#!">
-                Link 4
+              Itinerary
               </a>
             </li>
           </ul>
         }
         className="teal"
       >
-        <h5 className="white-text">A Day In Denver</h5>
-        <p className="grey-text text-lighten-4">
-        One Day In Denver is the one stop app for exploring Denver!
-        </p>
+        <p className=" live "> LIVE LOVE WANDER</p>
+        {/* <p className = " love "> LOVE</p>
+     <p className = " Wander "> WANDER</p> */}
+        <div />
+
+        <div className="picture">
+          ReactDOM.render(Parser('
+          <div>
+            <img src="https://image.ibb.co/cZsma0/logo.png" alt=" Mountains" />
+          </div>
+          '), document.getElementById('root'));
+        </div>
       </Footer>
     );
   }

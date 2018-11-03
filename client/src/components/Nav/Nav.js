@@ -4,6 +4,13 @@ import { NavLink } from "react-router-dom";
 import TestModal from "../Modal"
 
 class Nav extends React.Component {
+
+  logout(){
+    sessionStorage.clear();
+    window.location.reload();
+
+  }
+
   render() {
     return (
       <div className="navbar-fixed">
@@ -33,28 +40,16 @@ class Nav extends React.Component {
                 Home
               </NavLink>
             </ul> */}
-            <ul className="right hide-on-med-and-down">
+                        <ul className="right hide-on-med-and-down">
               <NavLink
-                to="/second"
+                to="/"
                 style={{ color: "#795548", fontWeight: "bold", }}
                 activeStyle={{
                   textDecoration: "underline #795548 solid",
                 }}
+                onClick={this.logout}
               >
-                Favorites
-              </NavLink>
-            </ul>
-            <ul className="right hide-on-med-and-down">
-              <NavLink
-                to="/third"
-                style={{ color: "#795548",
-                fontWeight: "bold", }}
-                activeStyle={{
-                  textDecoration: "underline #795548 solid",
-
-                }}
-              >
-                Events
+                Logout
               </NavLink>
             </ul>
             <ul className="right hide-on-med-and-down">
@@ -69,6 +64,32 @@ class Nav extends React.Component {
                 Itinerary
               </NavLink>
             </ul>
+            <ul className="right hide-on-med-and-down">
+              <NavLink
+                to="/third"
+                style={{ color: "#795548",
+                fontWeight: "bold", }}
+                activeStyle={{
+                  textDecoration: "underline #795548 solid",
+
+                }}
+              >
+                Meetups
+              </NavLink>
+            </ul>
+            <ul className="right hide-on-med-and-down">
+              <NavLink
+                to="/second"
+                style={{ color: "#795548", fontWeight: "bold", }}
+                activeStyle={{
+                  textDecoration: "underline #795548 solid",
+                }}
+              >
+                Local Favorites
+              </NavLink>
+            </ul>
+
+
 
             <ul id="nav-mobile" className="sidenav">
               <li>

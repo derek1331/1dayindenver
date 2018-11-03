@@ -12,7 +12,7 @@ class Home extends React.Component {
             <br />
             <br />
             <h1 className="header center white-text text-lighten-2">
-              Plan Your Day Now!
+              Plan Your Day
             </h1>
             <div className="row center">
               {/* <h5 className="header col s12 light white-text">
@@ -25,34 +25,34 @@ class Home extends React.Component {
             <br />
           </div>
         </div>
-        <Parallax imageSrc="http://www.cpr.org/sites/default/files/styles/full-width/public/images/stockshowparade3.jpg?itok=D1cuHJeg" />
+        <Parallax  imageSrc="images\skylinenight.jpg" />
 
         <div className="container">
           <div className="section">
             {/*   Icon Section   */}
             <div className="row">
-              <div className="col s12 m4">
+              <div className="col s12 m4 center">
                 <div className="icon-block">
                   <h2 className="center brown-text">
                     Adventure
                     {/* <i className="material-icons">Adventure</i> */}
                   </h2>
                   {/* <h5 className="center">Exciting Experiences</h5> */}
-                  <p className="light">
+                  <p>
                     Fly fishing, exploring, skydiving, mountain climbing,
                     kayaking, mountain biking, skiing, snowboarding, hiking,
                     river rafting or participating in extreme sports.
                   </p>
                 </div>
               </div>
-              <div className="col s12 m4">
+              <div className="col s12 m4 center">
                 <div className="icon-block">
                   <h2 className="center brown-text">
                     Dining
                     {/* <i className="material-icons">Dining</i> */}
                   </h2>
                   {/* <h5 className="center">Eats and Drinks</h5> */}
-                  <p className="light">
+                  <p>
                     In Denver, one can eat incredibly well across many cuisines,
                     enjoy beer from a not-so-secret beer scene to fantastic
                     craft spirits and a booming roster of restaurants that take
@@ -61,14 +61,13 @@ class Home extends React.Component {
                   </p>
                 </div>
               </div>
-              <div className="col s12 m4">
+              <div className="col s12 m4 center">
                 <div className="icon-block">
                   <h2 className="center brown-text">
-                    Events
-                    {/* <i className="material-icons">Experiences</i> */}
+                  Entertainment                    {/* <i className="material-icons">Experiences</i> */}
                   </h2>
                   {/* <h5 className="center">Event or Occurance</h5> */}
-                  <p className="light">
+                  <p>
                   Top-rated events from beer tours, concerts, museums, parks, canibus tours, outdoor concerts, sporting events, opera, casinos, symphony, theatre, and jazz. 
 
                   </p>
@@ -77,42 +76,8 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <Parallax imageSrc="images\maroonbells.jpg" />
 
-        {/* <div className="container">
-          <div className="row center">
-            <h5 className="header col s12 light">
-              A modern responsive front-end framework based on Material Design
-            </h5>
-          </div>
-        </div> */}
-        <div className="container">
-          <div className="section">
-            {/* <img src="http://www.cpr.org/sites/default/files/styles/full-width/public/images/stockshowparade3.jpg?itok=D1cuHJeg"> */}
-            <div className="row">
-              <div className="col s12 center">
-                <h3>
-                  <i className="mdi-content-send brown-text" />
-                </h3>
-                <h4>Contact Us</h4>
-                <p className="left-align light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam scelerisque id nunc nec volutpat. Etiam pellentesque
-                  tristique arcu, non consequat magna fermentum ac. Cras ut
-                  ultricies eros. Maecenas eros justo, ullamcorper a sapien id,
-                  viverra ultrices eros. Morbi sem neque, posuere et pretium
-                  eget, bibendum sollicitudin lacus. Aliquam eleifend
-                  sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet
-                  semper molestie. Morbi massa odio, condimentum sed ipsum ac,
-                  gravida ultrices erat. Nullam eget dignissim mauris, non
-                  tristique erat. Vestibulum ante ipsum primis in faucibus orci
-                  luctus et ultrices posuere cubilia Curae;
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Parallax imageSrc="images\skylinenight.jpg" />
+        <Parallax imageSrc="images\maroonbells.jpg" />
         {/* <div className="container">
           <div className="row center">
             <h5 className="header col s12 light">

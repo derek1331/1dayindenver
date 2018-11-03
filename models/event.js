@@ -5,7 +5,7 @@ const eventSchema = new Schema({
     name: {type: String, required: true},
     category: String,
     rating: Number,
-    time: Number,
+    time: String,
     drive: Number,
     address: {type: String, required: true},
     lat: {type: Number, required: true},

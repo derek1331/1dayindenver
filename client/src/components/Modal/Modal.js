@@ -160,9 +160,8 @@ class TestModal extends React.Component {
     return (
       <Modal trigger={<Button>Sign Up | Login</Button>}>
         <div className="modal-header center-align">
-          <h5 className="center-align">OneDay in Denver</h5>
-          <br />
-          Start Your Adventure Now!
+        <img src="https://image.ibb.co/cZsma0/logo.png" alt=" Mountains" />
+          
         </div>
         <div className="modal-body">
           {icon}
